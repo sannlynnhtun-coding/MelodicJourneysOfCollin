@@ -6,8 +6,8 @@ namespace MelodicJourneysOfCollin.Services
 {
     public class MusicService
     {
-        public static List<SoundCloudPlayListModel> SoundCloundPlaylist =>
-                                    GetMusicPlayList<SoundCloudPlayListModel>(JsonData.MusicList)
+        public static List<SoundCloudPlaylistModel> SoundCloundPlaylist =>
+                                    GetMusicPlayList<SoundCloudPlaylistModel>(JsonData.MusicList)
                                      .Where(x=> x.PlatformType == (int)EnumMusicPlatformType.SoundCloud)
                                      .ToList();
         public static List<YouTubePlaylistModel> YouTubePlaylist =>

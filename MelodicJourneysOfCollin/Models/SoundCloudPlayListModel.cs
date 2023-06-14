@@ -1,6 +1,6 @@
 ﻿namespace MelodicJourneysOfCollin.Models
 {
-    public class SoundCloudPlayListModel
+    public class SoundCloudPlaylistModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
