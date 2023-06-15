@@ -21,4 +21,14 @@
     <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\DJShop\js\compressed.js" />
+    <None Include="wwwroot\DJShop\js\cue.min.js" />
+    <None Include="wwwroot\DJShop\js\main.js" />
+    <None Include="wwwroot\DJShop\js\mediaelement-and-player.min.js" />
+    <None Include="wwwroot\DJShop\js\mediaelement-migrate.min.js" />
+    <None Include="wwwroot\DJShop\js\switcher.js" />
+    <None Include="wwwroot\DJShop\js\vendor\modernizr-2.6.2.min.js" />
+  </ItemGroup>
+
 </Project>
