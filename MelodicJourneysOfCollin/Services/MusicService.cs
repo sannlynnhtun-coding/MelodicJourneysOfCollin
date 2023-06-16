@@ -8,11 +8,11 @@ namespace MelodicJourneysOfCollin.Services
     {
         public static List<SoundCloudPlaylistModel> SoundCloundPlaylist =>
                                     GetMusicPlayList<SoundCloudPlaylistModel>(JsonData.MusicList)
-                                     .Where(x=> x.PlatformType == (int)EnumMusicPlatformType.SoundCloud)
+                                     .Where(x => x.PlatformType == (int)EnumMusicPlatformType.SoundCloud)
                                      .ToList();
         public static List<YouTubePlaylistModel> YouTubePlaylist =>
                                      GetMusicPlayList<YouTubePlaylistModel>(JsonData.MusicList)
-                                     .Where(x=> x.PlatformType == (int)EnumMusicPlatformType.YouTube)
+                                     .Where(x => x.PlatformType == (int)EnumMusicPlatformType.YouTube)
                                      .ToList();
         public static List<MediaFireDownloadModel> MediaFireDownloadlist =>
                                      GetMusicPlayList<MediaFireDownloadModel>(JsonData.MusicList)
@@ -28,25 +28,27 @@ namespace MelodicJourneysOfCollin.Services
         //                             .ToList();
         public static List<T> GetMusicPlayList<T>(string json)
         {
-            var list = JsonConvert.DeserializeObject<List<T>>(json);
+            //var list = JsonConvert.DeserializeObject<List<T>>(json);
+            var list = json.ToObject<List<T>>();
             return list;
         }
     }
 
     public static class JsonData
     {
-        public static string MusicList { get; } = @"{
-     [
+        public static string MusicList { get; } = @"[
         {
             ""Id"": ""1"",
             ""Name"": ""Collin - Day 4 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""2"",
             ""Name"": ""Collin - Day 4 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -74,12 +76,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""6"",
             ""Name"": ""Collin - Day 3 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""7"",
             ""Name"": ""Collin - Day 3 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -107,12 +111,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""11"",
             ""Name"": ""Collin - Day 2 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""12"",
             ""Name"": ""Collin - Day 2 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -140,12 +146,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""16"",
             ""Name"": ""Collin - Day 1 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""17"",
             ""Name"": ""Collin - Day 1 [2023]"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -173,12 +181,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""21"",
             ""Name"": ""The Kid Laroi, Justin Bieber - Stay (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""22"",
             ""Name"": ""The Kid Laroi, Justin Bieber - Stay (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -206,12 +216,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""26"",
             ""Name"": ""Marshmello x Jonas Brothers - Leave Before You Love Me (Collin Edit)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""27"",
             ""Name"": ""Marshmello x Jonas Brothers - Leave Before You Love Me (Collin Edit)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -239,12 +251,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""31"",
             ""Name"": ""Collin - ID (Love)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""32"",
             ""Name"": ""Collin - ID (Love)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -272,12 +286,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""36"",
             ""Name"": ""Collin - ID (I miss you so bad in Thingyan)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""37"",
             ""Name"": ""Collin - ID (I miss you so bad in Thingyan)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -305,12 +321,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""41"",
             ""Name"": ""Collin - Memories (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""42"",
             ""Name"": ""Collin - Memories (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -338,12 +356,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""46"",
             ""Name"": ""Blasterjaxx - Legion (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""47"",
             ""Name"": ""Blasterjaxx - Legion (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -357,6 +377,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""49"",
             ""Name"": ""Blasterjaxx - Legion (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -370,12 +391,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""51"",
             ""Name"": ""The Kid Laroi, Justin Bieber - Stay (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""52"",
             ""Name"": ""The Kid Laroi, Justin Bieber - Stay (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -389,6 +412,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""54"",
             ""Name"": ""The Kid Laroi, Justin Bieber - Stay (Collin Remix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -402,12 +426,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""56"",
             ""Name"": ""Sagemode vs Collin - Sky Cracker (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""57"",
             ""Name"": ""Sagemode vs Collin - Sky Cracker (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -421,6 +447,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""59"",
             ""Name"": ""Sagemode vs Collin - Sky Cracker (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -434,12 +461,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""61"",
             ""Name"": ""Collin - Switch Back (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""62"",
             ""Name"": ""Collin - Switch Back (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -453,6 +482,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""64"",
             ""Name"": ""Collin - Switch Back (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -466,12 +496,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""66"",
             ""Name"": ""Collin - Father's Love (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""67"",
             ""Name"": ""Collin - Father's Love (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -485,6 +517,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""69"",
             ""Name"": ""Collin - Father's Love (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -498,12 +531,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""71"",
             ""Name"": ""Collin - Last Life (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""72"",
             ""Name"": ""Collin - Last Life (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -517,6 +552,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""74"",
             ""Name"": ""Collin - Last Life (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -530,12 +566,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""76"",
             ""Name"": ""Collin - Invisible (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""77"",
             ""Name"": ""Collin - Invisible (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -549,6 +587,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""79"",
             ""Name"": ""Collin - Invisible (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -562,12 +601,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""81"",
             ""Name"": ""Sage & Collin - The Sage (VIP Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""82"",
             ""Name"": ""Sage & Collin - The Sage (VIP Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -581,6 +622,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""84"",
             ""Name"": ""Sage & Collin - The Sage (VIP Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -594,12 +636,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""86"",
             ""Name"": ""K3/\\!N & Collin - Sign Of Love (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""87"",
             ""Name"": ""K3/\\!N & Collin - Sign Of Love (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -613,6 +657,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""89"",
             ""Name"": ""K3/\\!N & Collin - Sign Of Love (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -626,12 +671,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""91"",
             ""Name"": ""Thingyan Moe (The Luminosity x Colllin)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""92"",
             ""Name"": ""Thingyan Moe (The Luminosity x Colllin)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -645,6 +692,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""94"",
             ""Name"": ""Thingyan Moe (The Luminosity x Colllin)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -658,12 +706,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""96"",
             ""Name"": ""Sage x Collin - Imaginations (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""97"",
             ""Name"": ""Sage x Collin - Imaginations (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -677,6 +727,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""99"",
             ""Name"": ""Sage x Collin - Imaginations (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
@@ -690,12 +741,14 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""101"",
             ""Name"": ""Collin - Nobody Gets Out Alive (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""102"",
             ""Name"": ""Collin - Nobody Gets Out Alive (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -709,24 +762,28 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""104"",
             ""Name"": ""Collin - Nobody Gets Out Alive (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
             ""Id"": ""105"",
             ""Name"": ""Collin - Nobody Gets Out Alive (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""4""
         },
         {
             ""Id"": ""106"",
             ""Name"": ""Collin - Senses (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""107"",
             ""Name"": ""Collin - Senses (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -740,24 +797,28 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""109"",
             ""Name"": ""Collin - Senses (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
             ""Id"": ""110"",
             ""Name"": ""Collin - Senses (Original Mix)"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""4""
         },
         {
             ""Id"": ""111"",
             ""Name"": ""Electric Twinz (P2 x Collin) - K.O.T.E.M.F (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""112"",
             ""Name"": ""Electric Twinz (P2 x Collin) - K.O.T.E.M.F (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -771,24 +832,28 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""114"",
             ""Name"": ""Electric Twinz (P2 x Collin) - K.O.T.E.M.F (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
             ""Id"": ""115"",
             ""Name"": ""Electric Twinz (P2 x Collin) - K.O.T.E.M.F (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""4""
         },
         {
             ""Id"": ""116"",
             ""Name"": ""Kavin & Colllin - Melody Of Angels (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0""
         },
         {
             ""Id"": ""117"",
             ""Name"": ""Kavin & Colllin - Melody Of Angels (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""1""
         },
         {
@@ -802,15 +867,16 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""119"",
             ""Name"": ""Kavin & Colllin - Melody Of Angels (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""3""
         },
         {
             ""Id"": ""120"",
             ""Name"": ""Kavin & Colllin - Melody Of Angels (Original Mix) Free Download"",
             ""Genre"": ""EDM"",
+""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""4""
         }
-    ]
-}";
+    ]";
     }
 }

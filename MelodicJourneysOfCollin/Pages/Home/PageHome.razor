@@ -1,31 +1,28 @@
 ﻿@page "/"
 
-<div class="col-md-4 col-sm-6">
-	<div class="vertical-item slide-media text-center loop-color">
-		<div class="item-media-wrap">
-            <img src="~/djshop/images/albums/cd.png" />
-			<div class="item-media back-media"> <img src="~/djshop/images/albums/cd.png" alt=""> </div>
-			<div class="item-media">
-				<img src="~/djshop/images/albums/01.jpg" alt="">
-				<div class="media-links no-overlay">
-					<div class="links-wrap"> <a href="single-album.html" class="p-link"></a> </div>
-					<div class="bottom-links">
-						<a href="https://play.google.com/store/music" target="blanck">
-							<img src="~/djshop/images/google-play.png" alt="">
-						</a> <a href="https://itunes.apple.com/us/genre/music" target="blanck">
-							<img src="~/djshop/images/app-store.png" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="item-content topmargin_25">
-			<div class="star-rating" title="Rated 4.0 out of 5">
-				<span style="width:80%">
-					<strong class="rating">4.0</strong> out of 5
-				</span>
-			</div>
-			<h4 class="entry-title topmargin_5"> <a href="single-album.html">"Dirty Vibes"</a> </h4>
-		</div>
-	</div>
+<div class="row">
+    <Virtualize Items="@_soundCloudList" Context="soundCloudItem">
+        @*<div class="col-12">*@
+            <iframe width="100%" height="166" scrolling="no" 
+            style="margin-top: 3%;border-radius: 12px;"
+                    frameborder="no" allow="autoplay"
+                    src="@soundCloudItem.Link">
+            </iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;
+                        word-break: normal;overflow: hidden;white-space: nowrap;
+                        text-overflow: ellipsis; 
+                        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+            </div>
+       @* </div>*@
+    </Virtualize>
+    <button class="main__load" type="button">Load more</button>
 </div>
+
+@code{
+    private List<SoundCloudPlaylistModel> _soundCloudList { get; set; } = new();
+
+    protected override void OnInitialized()
+    {
+        _soundCloudList = MusicService.SoundCloundPlaylist;
+    }
+}
