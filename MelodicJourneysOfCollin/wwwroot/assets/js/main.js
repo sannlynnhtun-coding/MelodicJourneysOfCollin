@@ -1,372 +1,372 @@
 $(document).ready(function () {
-	"use strict"; // start of use strict
+    "use strict"; // start of use strict
 
-	/*==============================
-	Menu
-	==============================*/
-	$('.header__btn').on('click', function() {
-		$(this).toggleClass('header__btn--active');
-		$('.sidebar').toggleClass('sidebar--active');
-	});
+    /*==============================
+    Menu
+    ==============================*/
+    $('.header__btn').on('click', function () {
+        $(this).toggleClass('header__btn--active');
+        $('.sidebar').toggleClass('sidebar--active');
+    });
 
-	$('.header__search .close, .header__action--search button').on('click', function() {
-		$('.header__search').toggleClass('header__search--active');
-	});
+    $('.header__search .close, .header__action--search button').on('click', function () {
+        $('.header__search').toggleClass('header__search--active');
+    });
 
-	/*==============================
-	Home slider
-	==============================*/
-	$('.hero').owlCarousel({
-		mouseDrag: true,
-		touchDrag: true,
-		dots: true,
-		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
-		autoHeight: true,
-		items: 1,
-		responsive: {
-			0 : {
-				margin: 20,
-			},
-			576 : {
-				margin: 20,
-			},
-			768 : {
-				margin: 30,
-			},
-			1200 : {
-				margin: 30,
-			},
-		}
-	});
+    /*==============================
+    Home slider
+    ==============================*/
+    $('.hero').owlCarousel({
+        mouseDrag: true,
+        touchDrag: true,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 600,
+        autoHeight: true,
+        items: 1,
+        responsive: {
+            0: {
+                margin: 20,
+            },
+            576: {
+                margin: 20,
+            },
+            768: {
+                margin: 30,
+            },
+            1200: {
+                margin: 30,
+            },
+        }
+    });
 
-	/*==============================
-	Carousel
-	==============================*/
-	$('.main__carousel--events').owlCarousel({
-		mouseDrag: true,
-		touchDrag: true,
-		dots: true,
-		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
-		margin: 20,
-		autoHeight: true,
-		responsive: {
-			0 : {
-				items: 1,
-			},
-			576 : {
-				items: 2,
-			},
-			768 : {
-				items: 2,
-				margin: 30,
-			},
-			992 : {
-				items: 3,
-				margin: 30,
-			},
-			1200 : {
-				items: 3,
-				margin: 30,
-				mouseDrag: false,
-			},
-		}
-	});
+    /*==============================
+    Carousel
+    ==============================*/
+    $('.main__carousel--events').owlCarousel({
+        mouseDrag: true,
+        touchDrag: true,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 600,
+        margin: 20,
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 2,
+            },
+            768: {
+                items: 2,
+                margin: 30,
+            },
+            992: {
+                items: 3,
+                margin: 30,
+            },
+            1200: {
+                items: 3,
+                margin: 30,
+                mouseDrag: false,
+            },
+        }
+    });
 
-	$('.main__carousel--artists').owlCarousel({
-		mouseDrag: true,
-		touchDrag: true,
-		dots: true,
-		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
-		margin: 20,
-		autoHeight: true,
-		responsive: {
-			0 : {
-				items: 2,
-			},
-			576 : {
-				items: 3,
-			},
-			768 : {
-				items: 4,
-				margin: 30,
-			},
-			992 : {
-				items: 6,
-				margin: 30,
-			},
-			1200 : {
-				items: 6,
-				margin: 30,
-			},
-		}
-	});
+    $('.main__carousel--artists').owlCarousel({
+        mouseDrag: true,
+        touchDrag: true,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 600,
+        margin: 20,
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 2,
+            },
+            576: {
+                items: 3,
+            },
+            768: {
+                items: 4,
+                margin: 30,
+            },
+            992: {
+                items: 6,
+                margin: 30,
+            },
+            1200: {
+                items: 6,
+                margin: 30,
+            },
+        }
+    });
 
-	$('.main__carousel--store').owlCarousel({
-		mouseDrag: true,
-		touchDrag: true,
-		dots: true,
-		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
-		margin: 20,
-		autoHeight: true,
-		responsive: {
-			0 : {
-				items: 2,
-			},
-			576 : {
-				items: 3,
-			},
-			768 : {
-				items: 3,
-				margin: 30,
-			},
-			992 : {
-				items: 4,
-				margin: 30,
-			},
-			1200 : {
-				items: 5,
-				margin: 30,
-			},
-		}
-	});
+    $('.main__carousel--store').owlCarousel({
+        mouseDrag: true,
+        touchDrag: true,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 600,
+        margin: 20,
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 2,
+            },
+            576: {
+                items: 3,
+            },
+            768: {
+                items: 3,
+                margin: 30,
+            },
+            992: {
+                items: 4,
+                margin: 30,
+            },
+            1200: {
+                items: 5,
+                margin: 30,
+            },
+        }
+    });
 
-	$('.main__carousel--podcasts').owlCarousel({
-		mouseDrag: true,
-		touchDrag: true,
-		dots: true,
-		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
-		margin: 20,
-		autoHeight: true,
-		responsive: {
-			0 : {
-				items: 1,
-			},
-			576 : {
-				items: 2,
-			},
-			768 : {
-				items: 2,
-				margin: 30,
-			},
-			992 : {
-				items: 3,
-				margin: 30,
-			},
-			1200 : {
-				items: 3,
-				margin: 30,
-				mouseDrag: false,
-			},
-		}
-	});
+    $('.main__carousel--podcasts').owlCarousel({
+        mouseDrag: true,
+        touchDrag: true,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 600,
+        margin: 20,
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 2,
+            },
+            768: {
+                items: 2,
+                margin: 30,
+            },
+            992: {
+                items: 3,
+                margin: 30,
+            },
+            1200: {
+                items: 3,
+                margin: 30,
+                mouseDrag: false,
+            },
+        }
+    });
 
-	/*==============================
-	Navigation
-	==============================*/
-	$('.main__nav--prev').on('click', function() {
-		var carouselId = $(this).attr('data-nav');
-		$(carouselId).trigger('prev.owl.carousel');
-	});
-	$('.main__nav--next').on('click', function() {
-		var carouselId = $(this).attr('data-nav');
-		$(carouselId).trigger('next.owl.carousel');
-	});
+    /*==============================
+    Navigation
+    ==============================*/
+    $('.main__nav--prev').on('click', function () {
+        var carouselId = $(this).attr('data-nav');
+        $(carouselId).trigger('prev.owl.carousel');
+    });
+    $('.main__nav--next').on('click', function () {
+        var carouselId = $(this).attr('data-nav');
+        $(carouselId).trigger('next.owl.carousel');
+    });
 
-	/*==============================
-	Partners
-	==============================*/
-	$('.partners').owlCarousel({
-		mouseDrag: false,
-		touchDrag: false,
-		dots: false,
-		loop: true,
-		autoplay: true,
-		autoplayTimeout: 5000,
-		autoplayHoverPause: true,
-		smartSpeed: 600,
-		margin: 20,
-		responsive : {
-			0 : {
-				items: 2,
-			},
-			576 : {
-				items: 3,
-				margin: 20,
-			},
-			768 : {
-				items: 4,
-				margin: 30,
-			},
-			992 : {
-				items: 4,
-				margin: 30,
-			},
-			1200 : {
-				items: 6,
-				margin: 30,
-			},
-			1900 : {
-				items: 8,
-				margin: 30,
-			},
-		}
-	});
+    /*==============================
+    Partners
+    ==============================*/
+    $('.partners').owlCarousel({
+        mouseDrag: false,
+        touchDrag: false,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 600,
+        margin: 20,
+        responsive: {
+            0: {
+                items: 2,
+            },
+            576: {
+                items: 3,
+                margin: 20,
+            },
+            768: {
+                items: 4,
+                margin: 30,
+            },
+            992: {
+                items: 4,
+                margin: 30,
+            },
+            1200: {
+                items: 6,
+                margin: 30,
+            },
+            1900: {
+                items: 8,
+                margin: 30,
+            },
+        }
+    });
 
-	/*==============================
-	Product
-	==============================*/
-	$('.store-item__carousel').owlCarousel({
-		mouseDrag: true,
-		touchDrag: true,
-		dots: true,
-		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
-		autoHeight: true,
-		items: 1,
-		margin: 20,
-	});
+    /*==============================
+    Product
+    ==============================*/
+    $('.store-item__carousel').owlCarousel({
+        mouseDrag: true,
+        touchDrag: true,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 600,
+        autoHeight: true,
+        items: 1,
+        margin: 20,
+    });
 
-	/*==============================
-	Filter
-	==============================*/
-	$('.filter__item-menu li').each( function() {
-		$(this).attr('data-value', $(this).text().toLowerCase());
-	});
+    /*==============================
+    Filter
+    ==============================*/
+    $('.filter__item-menu li').each(function () {
+        $(this).attr('data-value', $(this).text().toLowerCase());
+    });
 
-	$('.filter__item-menu li').on('click', function() {
-		var text = $(this).text();
-		var item = $(this);
-		var id = item.closest('.filter').attr('id');
-		$('#'+id).find('.filter__item-btn input').val(text);
-	});
+    $('.filter__item-menu li').on('click', function () {
+        var text = $(this).text();
+        var item = $(this);
+        var id = item.closest('.filter').attr('id');
+        $('#' + id).find('.filter__item-btn input').val(text);
+    });
 
-	/*==============================
-	Modal
-	==============================*/
-	$('.open-video, .open-map').magnificPopup({
-		disableOn: 0,
-		fixedContentPos: true,
-		type: 'iframe',
-		preloader: false,
-		removalDelay: 300,
-		mainClass: 'mfp-fade',
-	});
+    /*==============================
+    Modal
+    ==============================*/
+    $('.open-video, .open-map').magnificPopup({
+        disableOn: 0,
+        fixedContentPos: true,
+        type: 'iframe',
+        preloader: false,
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+    });
 
-	$('.open-modal').magnificPopup({
-		fixedContentPos: true,
-		fixedBgPos: true,
-		overflowY: 'auto',
-		type: 'inline',
-		preloader: false,
-		focus: '#username',
-		modal: false,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in',
-	});
+    $('.open-modal').magnificPopup({
+        fixedContentPos: true,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        type: 'inline',
+        preloader: false,
+        focus: '#username',
+        modal: false,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in',
+    });
 
-	$('.modal__close').on('click', function (e) {
-		e.preventDefault();
-		$.magnificPopup.close();
-	});
+    $('.modal__close').on('click', function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+    });
 
-	/*==============================
-	Select
-	==============================*/
-	$('.main__select').select2({
-		minimumResultsForSearch: Infinity
-	});
+    /*==============================
+    Select
+    ==============================*/
+    $('.main__select').select2({
+        minimumResultsForSearch: Infinity
+    });
 
-	/*==============================
-	Scrollbar
-	==============================*/
-	var Scrollbar = window.Scrollbar;
+    /*==============================
+    Scrollbar
+    ==============================*/
+    var Scrollbar = window.Scrollbar;
 
-	$('.sidebar__nav-link[data-toggle="collapse"]').on('click', function() {
-		if ($('.sidebar__menu--scroll').length) {
-			Scrollbar.init(document.querySelector('.sidebar__menu--scroll'), {
-				damping: 0.1,
-				renderByPixels: true,
-				alwaysShowTracks: true,
-				continuousScrolling: false,
-			});
-		}
-	});
+    $('.sidebar__nav-link[data-toggle="collapse"]').on('click', function () {
+        if ($('.sidebar__menu--scroll').length) {
+            Scrollbar.init(document.querySelector('.sidebar__menu--scroll'), {
+                damping: 0.1,
+                renderByPixels: true,
+                alwaysShowTracks: true,
+                continuousScrolling: false,
+            });
+        }
+    });
 
-	if ($('.dashbox__table-scroll').length) {
-		Scrollbar.init(document.querySelector('.dashbox__table-scroll'), {
-			damping: 0.1,
-			renderByPixels: true,
-			alwaysShowTracks: true,
-			continuousScrolling: true
-		});
-	}
+    if ($('.dashbox__table-scroll').length) {
+        Scrollbar.init(document.querySelector('.dashbox__table-scroll'), {
+            damping: 0.1,
+            renderByPixels: true,
+            alwaysShowTracks: true,
+            continuousScrolling: true
+        });
+    }
 
-	if ($('.cart__table-scroll').length) {
-		Scrollbar.init(document.querySelector('.cart__table-scroll'), {
-			damping: 0.1,
-			renderByPixels: true,
-			alwaysShowTracks: true,
-			continuousScrolling: true
-		});
-	}
+    if ($('.cart__table-scroll').length) {
+        Scrollbar.init(document.querySelector('.cart__table-scroll'), {
+            damping: 0.1,
+            renderByPixels: true,
+            alwaysShowTracks: true,
+            continuousScrolling: true
+        });
+    }
 
-	if ($('.dashbox__scroll').length) {
-		Scrollbar.init(document.querySelector('.dashbox__scroll'), {
-			damping: 0.1,
-			renderByPixels: true,
-			alwaysShowTracks: true,
-			continuousScrolling: true
-		});
-	}
+    if ($('.dashbox__scroll').length) {
+        Scrollbar.init(document.querySelector('.dashbox__scroll'), {
+            damping: 0.1,
+            renderByPixels: true,
+            alwaysShowTracks: true,
+            continuousScrolling: true
+        });
+    }
 
-	if ($('.release__list').length) {
-		Scrollbar.init(document.querySelector('.release__list'), {
-			damping: 0.1,
-			renderByPixels: true,
-			alwaysShowTracks: true,
-			continuousScrolling: true
-		});
-	}
+    if ($('.release__list').length) {
+        Scrollbar.init(document.querySelector('.release__list'), {
+            damping: 0.1,
+            renderByPixels: true,
+            alwaysShowTracks: true,
+            continuousScrolling: true
+        });
+    }
 
-	/*==============================
-	Bg
-	==============================*/
-	$('.hero__slide, .event').each( function() {
-		if ($(this).attr("data-bg")){
-			$(this).css({
-				'background': 'url(' + $(this).data('bg') + ')',
-				'background-position': 'center center',
-				'background-repeat': 'no-repeat',
-				'background-size': 'cover'
-			});
-		}
-	});
+    /*==============================
+    Bg
+    ==============================*/
+    $('.hero__slide, .event').each(function () {
+        if ($(this).attr("data-bg")) {
+            $(this).css({
+                'background': 'url(' + $(this).data('bg') + ')',
+                'background-position': 'center center',
+                'background-repeat': 'no-repeat',
+                'background-size': 'cover'
+            });
+        }
+    });
 
-	/*==============================
-	Inputmask
-	==============================*/
-	$('.stats__form input').inputmask('99-99-99-99');
+    /*==============================
+    Inputmask
+    ==============================*/
+    $('.stats__form input').inputmask('99-99-99-99');
 
-	/*==============================
-	Player
-	==============================*/
-	$('.player__btn').on('click', function() {
-		$(this).toggleClass('player__btn--active');
-		$('.player').toggleClass('player--active');
-	});
+    /*==============================
+    Player
+    ==============================*/
+    $('.player__btn').on('click', function () {
+        $(this).toggleClass('player__btn--active');
+        $('.player').toggleClass('player--active');
+    });
 
-	const controls = `
+    const controls = `
 	<div class="plyr__controls">
 		<div class="plyr__actions">
 			<button type="button" class="plyr__control plyr__control--prev">
@@ -412,144 +412,140 @@ $(document).ready(function () {
 		</div>
 	</div>
 	`;
-	var player = new Plyr('#audio', {
-		controls,
-		volume: 0.5,
-	});
+    var player = new Plyr('#audio', {
+        controls,
+        volume: 0.5,
+    });
 
-	var audio = $('#audio');
+    var audio = $('#audio');
 
-	player.on('play', event => {
-		$('a[data-link].active, a[data-playlist].active').addClass('play');
-		$('a[data-link].active, a[data-playlist].active').removeClass('pause');
-	});
+    player.on('play', event => {
+        $('a[data-link].active, a[data-playlist].active').addClass('play');
+        $('a[data-link].active, a[data-playlist].active').removeClass('pause');
+    });
 
-	player.on('pause', event => {
-		$('a[data-link].active, a[data-playlist].active').removeClass('play');
-		$('a[data-link].active, a[data-playlist].active').addClass('pause');
-	});
+    player.on('pause', event => {
+        $('a[data-link].active, a[data-playlist].active').removeClass('play');
+        $('a[data-link].active, a[data-playlist].active').addClass('pause');
+    });
 
-	/* single */
-	$('a[data-link]').on('click', function(e){
-		e.preventDefault();
-		let link = $(this);
-		run(link, audio[0]);
-	});
+    /* single */
+    $('a[data-link]').on('click', function (e) {
+        e.preventDefault();
+        let link = $(this);
+        run(link, audio[0]);
+    });
 
-	function run(link, player){
-		if ($(link).hasClass('play')) {
-			$(link).removeClass('play');
-			audio[0].pause();
-			$(link).addClass('pause');
-		}
-		else if ($(link).hasClass('pause')) {
-			$(link).removeClass('pause');
-			audio[0].play();
-			$(link).addClass('play');
-		}
-		else {
-			$('a[data-link]').removeClass('active');
-			$('a[data-link]').removeClass('pause');
-			$('a[data-link]').removeClass('play');
-			$(link).addClass('active');
-			$(link).addClass('play');
-			player.src = $(link).attr('href');
+    function run(link, player) {
+        if ($(link).hasClass('play')) {
+            $(link).removeClass('play');
+            audio[0].pause();
+            $(link).addClass('pause');
+        } else if ($(link).hasClass('pause')) {
+            $(link).removeClass('pause');
+            audio[0].play();
+            $(link).addClass('play');
+        } else {
+            $('a[data-link]').removeClass('active');
+            $('a[data-link]').removeClass('pause');
+            $('a[data-link]').removeClass('play');
+            $(link).addClass('active');
+            $(link).addClass('play');
+            player.src = $(link).attr('href');
 
-			let title = $(link).data('title');
-			let artist = $(link).data('artist');
-			let img = $(link).data('img');
-			$('.player__title').text(title);
-			$('.player__artist').text(artist);
-			$('.player__cover img').attr('src', img);
-			audio[0].load();
-			audio[0].play();
-		}
-	}
+            let title = $(link).data('title');
+            let artist = $(link).data('artist');
+            let img = $(link).data('img');
+            $('.player__title').text(title);
+            $('.player__artist').text(artist);
+            $('.player__cover img').attr('src', img);
+            audio[0].load();
+            audio[0].play();
+        }
+    }
 
-	/* playlist */
-	if ($('.main__list--playlist').length) {
-		var current = 0;
-		var playlist = $('.main__list--playlist');
-		var tracks = playlist.find('li a[data-playlist]');
-		var len = tracks.length;
+    /* playlist */
+    if ($('.main__list--playlist').length) {
+        var current = 0;
+        var playlist = $('.main__list--playlist');
+        var tracks = playlist.find('li a[data-playlist]');
+        var len = tracks.length;
 
-		playlist.find('a[data-playlist]').on('click', function(e){
-			e.preventDefault();
-			let link = $(this);
-			current = link.parent().index();
-			run2(link, audio[0]);
-		});
+        playlist.find('a[data-playlist]').on('click', function (e) {
+            e.preventDefault();
+            let link = $(this);
+            current = link.parent().index();
+            run2(link, audio[0]);
+        });
 
-		player.on('ended', event => {
-			let link = $('.single-item__cover.play');
-			current++;
-			if (current == len) {
-				current = 0;
-				link = playlist.find('a[data-playlist]')[0];
-			} else {
-				link = playlist.find('a[data-playlist]')[current];
-			}
-			run2($(link),audio[0]);
-		});
+        player.on('ended', event => {
+            let link = $('.single-item__cover.play');
+            current++;
+            if (current == len) {
+                current = 0;
+                link = playlist.find('a[data-playlist]')[0];
+            } else {
+                link = playlist.find('a[data-playlist]')[current];
+            }
+            run2($(link), audio[0]);
+        });
 
-		$('.plyr__control--prev').on('click', function(e){
-			let link = $('.single-item__cover.play');
-			current--;
-			if (current == -1) {
-				current = len - 1;
-				link = playlist.find('a[data-playlist]')[current];
-			} else {
-				link = playlist.find('a[data-playlist]')[current];
-			}
-			run2($(link),audio[0]);
-		});
+        $('.plyr__control--prev').on('click', function (e) {
+            let link = $('.single-item__cover.play');
+            current--;
+            if (current == -1) {
+                current = len - 1;
+                link = playlist.find('a[data-playlist]')[current];
+            } else {
+                link = playlist.find('a[data-playlist]')[current];
+            }
+            run2($(link), audio[0]);
+        });
 
-		$('.plyr__control--next').on('click', function(e){
-			let link = $('.single-item__cover.play');
-			current++;
-			if (current == len) {
-				current = 0;
-				link = playlist.find('a[data-playlist]')[0];
-			} else {
-				link = playlist.find('a[data-playlist]')[current];
-			}
-			run2($(link),audio[0]);
-		});
+        $('.plyr__control--next').on('click', function (e) {
+            let link = $('.single-item__cover.play');
+            current++;
+            if (current == len) {
+                current = 0;
+                link = playlist.find('a[data-playlist]')[0];
+            } else {
+                link = playlist.find('a[data-playlist]')[current];
+            }
+            run2($(link), audio[0]);
+        });
 
-		function run2(link, player){
-			if ($(link).hasClass('play')) {
-				$(link).removeClass('play');
-				audio[0].pause();
-				$(link).addClass('pause');
-			}
-			else if ($(link).hasClass('pause')) {
-				$(link).removeClass('pause');
-				audio[0].play();
-				$(link).addClass('play');
-			}
-			else {
-				$('a[data-playlist]').removeClass('active');
-				$('a[data-playlist]').removeClass('pause');
-				$('a[data-playlist]').removeClass('play');
-				$(link).addClass('active');
-				$(link).addClass('play');
-				player.src = $(link).attr('href');
+        function run2(link, player) {
+            if ($(link).hasClass('play')) {
+                $(link).removeClass('play');
+                audio[0].pause();
+                $(link).addClass('pause');
+            } else if ($(link).hasClass('pause')) {
+                $(link).removeClass('pause');
+                audio[0].play();
+                $(link).addClass('play');
+            } else {
+                $('a[data-playlist]').removeClass('active');
+                $('a[data-playlist]').removeClass('pause');
+                $('a[data-playlist]').removeClass('play');
+                $(link).addClass('active');
+                $(link).addClass('play');
+                player.src = $(link).attr('href');
 
-				let title = $(link).data('title');
-				let artist = $(link).data('artist');
-				let img = $(link).data('img');
-				$('.player__title').text(title);
-				$('.player__artist').text(artist);
-				$('.player__cover img').attr('src', img);
-				audio[0].load();
-				audio[0].play();
-			}
-		}
-	}
+                let title = $(link).data('title');
+                let artist = $(link).data('artist');
+                let img = $(link).data('img');
+                $('.player__title').text(title);
+                $('.player__artist').text(artist);
+                $('.player__cover img').attr('src', img);
+                audio[0].load();
+                audio[0].play();
+            }
+        }
+    }
 });
 
-window.setPlayer = function(){
-	const controls = `
+window.setPlayer = function () {
+    const controls = `
 	<div class="plyr__controls">
 		<div class="plyr__actions">
 			<button type="button" class="plyr__control plyr__control--prev">
@@ -595,20 +591,26 @@ window.setPlayer = function(){
 		</div>
 	</div>
 	`;
-	var player = new Plyr('#audio', {
-		controls,
-		volume: 0.5,
-	});
+    var player = new Plyr('#audio', {
+        controls,
+        // autoplay: true,
+        // clickToPlay: true,
+        volume: 0.5,
+        autoplay: true
+    });
 
-	var audio = $('#audio');
+    if ($('#audio').length > 0) {
+        player.play();
+    }
 
-	player.on('play', event => {
-		$('a[data-link].active, a[data-playlist].active').addClass('play');
-		$('a[data-link].active, a[data-playlist].active').removeClass('pause');
-	});
+    var audio = $('#audio');
+    player.on('play', event => {
+        $('a[data-link].active, a[data-playlist].active').addClass('play');
+        $('a[data-link].active, a[data-playlist].active').removeClass('pause');
+    });
 
-	player.on('pause', event => {
-		$('a[data-link].active, a[data-playlist].active').removeClass('play');
-		$('a[data-link].active, a[data-playlist].active').addClass('pause');
-	});
+    player.on('pause', event => {
+        $('a[data-link].active, a[data-playlist].active').removeClass('play');
+        $('a[data-link].active, a[data-playlist].active').addClass('pause');
+    });
 }
