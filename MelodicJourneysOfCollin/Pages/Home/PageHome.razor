@@ -1,28 +1,22 @@
 ﻿@page "/"
-
-<div class="row">
-    <Virtualize Items="@_soundCloudList" Context="soundCloudItem">
-        @*<div class="col-12">*@
-            <iframe width="100%" height="166" scrolling="no" 
-            style="margin-top: 3%;border-radius: 12px;"
-                    frameborder="no" allow="autoplay"
-                    src="@soundCloudItem.Link">
-            </iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;
-                        word-break: normal;overflow: hidden;white-space: nowrap;
-                        text-overflow: ellipsis; 
-                        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-            </div>
-       @* </div>*@
-    </Virtualize>
-    <button class="main__load" type="button">Load more</button>
-</div>
-
+<PageMusicPlayer MusicInfo="MusicInfo"/>
+<PageLocalPlaylist OnMusicSelection="Play" />
 @code{
-    private List<SoundCloudPlaylistModel> _soundCloudList { get; set; } = new();
 
-    protected override void OnInitialized()
+    private MusicInfoModel MusicInfo;
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        _soundCloudList = MusicService.SoundCloundPlaylist;
+        if (firstRender)
+        {
+            
+        }
     }
+
+    private void Play(MusicInfoModel musicInfo)
+    {
+        MusicInfo = musicInfo;
+        StateHasChanged();
+    }
+
 }

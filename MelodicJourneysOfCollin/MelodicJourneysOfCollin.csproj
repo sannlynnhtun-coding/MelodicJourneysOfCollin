@@ -21,4 +21,8 @@
     <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Playlist\" />
+  </ItemGroup>
+
 </Project>

@@ -4,10 +4,15 @@ using System.Text.Json.Serialization;
 
 namespace MelodicJourneysOfCollin.Services
 {
-    public class MusicService
+    public static class MusicService
     {
-        public static List<SoundCloudPlaylistModel> SoundCloundPlaylist =>
-                                    GetMusicPlayList<SoundCloudPlaylistModel>(JsonData.MusicList)
+        public static string ToLocalLink(this string str)
+        {
+            return $"music/{str}";
+        }
+        
+        public static List<MusicInfoModel> SoundCloundPlaylist =>
+                                    GetMusicPlayList<MusicInfoModel>(JsonData.MusicList)
                                      .Where(x => x.PlatformType == (int)EnumMusicPlatformType.SoundCloud)
                                      .ToList();
         public static List<YouTubePlaylistModel> YouTubePlaylist =>

@@ -26,3 +26,7 @@
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.title.sc-truncate {
+    display: none!important;
+}
