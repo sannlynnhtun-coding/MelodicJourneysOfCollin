@@ -10,5 +10,12 @@
         public string? Cover { get; set; }
         public int PlatformType { get; set; }
         public string? Length { get; set; }
+        public List<DownloadLinkModel> DownloadLinks { get; set; }
+    }
+    
+    public class DownloadLinkModel
+    {
+        public string PlatformType { get; set; }
+        public string DownloadLink { get; set; }
     }
 }

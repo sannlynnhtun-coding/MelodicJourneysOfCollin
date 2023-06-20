@@ -13,5 +13,10 @@ namespace MelodicJourneysOfCollin.Services
         {
             return JsonConvert.DeserializeObject<T>(str);
         }
+        
+        public static string Get<T>(this IEnumerable<T> lst, T detail)
+        {
+            return (lst.ToList().IndexOf(detail) + 1).ToString();
+        }
     }
 }

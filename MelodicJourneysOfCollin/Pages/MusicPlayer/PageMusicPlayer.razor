@@ -3,7 +3,8 @@
 @if (MusicInfo != null)
 {
     <!-- player -->
-    <div class="player player--active" style="@(_show ? "" : "display:none;")">
+    @* <div class="player player--active" style="@(_show ? "" : "display:none;")"> *@
+    <div class="player player--active">
         <div class="player__cover">
             <img src="@MusicInfo.Cover" alt="">
         </div>
@@ -13,7 +14,7 @@
                 <b class="player__title">@MusicInfo.Name</b> –
                 <span class="player__artist">@MusicInfo.Artists</span>
             </span>
-            <audio src="@MusicInfo.Link" id="audio" controls></audio>
+            <audio src="@MusicInfo.Link?.ToLocalLink()" id="audio" controls></audio>
         </div>
     </div>
 

@@ -15,52 +15,68 @@
 
             <div class="col-12">
                 <ul class="main__list">
-                    <li class="single-item">
-                        <span class="single-item__number">1</span>
-                        <a href="javascript:void(0);" @onclick="() => Play(MusicInfo)"
-                           class="single-item__cover">
-                            <img src="@MusicInfo.Cover" alt="">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"/>
-                            </svg>
-                        </a>
-                        <div class="single-item__title">
-                            <h4>
-                                <a href="javascript:void(0);">@MusicInfo.Name</a>
-                            </h4>
-                            <span>
-                                <a href="javascript:void(0);">@MusicInfo.Artists</a>
-                            </span>
-                        </div>
-                        <span class="single-item__time">@MusicInfo.Length</span>
-                    </li>
+                    @if (_musicInfoList != null)
+                    {
+                        @* <li class="single-item"> *@
+                        @*     <span class="single-item__number">1</span> *@
+                        @*     <a href="javascript:void(0);" @onclick="() => Play(MusicInfo)" *@
+                        @*        class="single-item__cover"> *@
+                        @*         <img src="@MusicInfo.Cover" alt=""> *@
+                        @*         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> *@
+                        @*             <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/> *@
+                        @*         </svg> *@
+                        @*         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> *@
+                        @*             <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"/> *@
+                        @*         </svg> *@
+                        @*     </a> *@
+                        @*     <div class="single-item__title"> *@
+                        @*         <h4> *@
+                        @*             <a href="javascript:void(0);">@MusicInfo.Name</a> *@
+                        @*         </h4> *@
+                        @*         <span> *@
+                        @*             <a href="javascript:void(0);">@MusicInfo.Artists</a> *@
+                        @*         </span> *@
+                        @*     </div> *@
+                        @*     <span class="single-item__time">@MusicInfo.Length</span> *@
+                        @* </li> *@
+                        <Virtualize Context="musicInfoItem" ItemsProvider="GetLocalPlaylist">
+                            <ItemContent>
+                                <li class="single-item">
+                                    <span class="single-item__number pr-2">
+                                        @((MarkupString)_musicInfoList.Get(musicInfoItem)
+                                            .PadLeft(_musicInfoList.Count.ToString().Length, ' ')
+                                            .Replace(" ", "&nbsp;"))
+                                    </span>
+                                    <a href="javascript:void(0);" @onclick="() => Play(musicInfoItem)"
+                                       class="single-item__cover">
+                                        <img src="@musicInfoItem.Cover" alt="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"/>
+                                        </svg>
+                                    </a>
+                                    <div class="single-item__title">
+                                        <h4>
+                                            <a href="javascript:void(0);">@musicInfoItem.Name</a>
+                                        </h4>
+                                        <span>
+                                            <a href="javascript:void(0);">@musicInfoItem.Artists</a>
+                                        </span>
+                                    </div>
+                                    <span class="single-item__time">@musicInfoItem.Length</span>
+                                </li>
+                            </ItemContent>
+                            <Placeholder>
+                                <p>
+                                    Loading&hellip;
+                                </p>
+                            </Placeholder>
+                        </Virtualize>
+                    }
                 </ul>
             </div>
         </div>
     </div>
 </section>
-
-@code {
-
-    [Parameter]
-    public EventCallback<MusicInfoModel> OnMusicSelection { get; set; }
-
-    private MusicInfoModel MusicInfo { get; set; } = new MusicInfoModel()
-    {
-        Cover = "https://i1.sndcdn.com/artworks-000226042151-vrzn6o-t500x500.jpg",
-        Name = "Kavin & Collin - Melody Of Angels (Original Mix)",
-        Artists = "Kavin & Collin",
-        Genre = "Tropical House & Progressive House",
-        Link = "Kavin & Colllin - Melody Of Angels (Original Mix).mp3".ToLocalLink(),
-        Length = "03:18"
-    };
-
-    async Task Play(MusicInfoModel musicInfo)
-    {
-        await OnMusicSelection.InvokeAsync(musicInfo);
-    }
-
-}

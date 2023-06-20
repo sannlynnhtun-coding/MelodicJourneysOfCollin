@@ -30,3 +30,7 @@
 .title.sc-truncate {
     display: none!important;
 }
+
+.single-item__number{
+    min-width: 32px;
+}
