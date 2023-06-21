@@ -14,7 +14,7 @@
                             <img src="assets/img/01.jpg" alt="" width="100%">
                             <div class="media-links no-overlay">
                                 <div class="links-wrap">
-                                    <a href="single-album.html" class="p-link"></a>
+                                    <a href="single-album.html" class="p-link" @onclick="GoTo"></a>
                                 </div>
                                 <div class="bottom-links">
                                     <a href="https://play.google.com/store/music" target="blanck">
@@ -50,7 +50,7 @@
                             <img src="assets/img/01.jpg" alt="" width="100%">
                             <div class="media-links no-overlay">
                                 <div class="links-wrap">
-                                    <a href="single-album.html" class="p-link"></a>
+                                    <a href="single-album.html" class="p-link" @onclick="GoTo"></a>
                                 </div>
                                 <div class="bottom-links">
                                     <a href="https://play.google.com/store/music" target="blanck">
@@ -88,7 +88,7 @@
                             <img src="assets/img/01.jpg" alt="" width="100%">
                             <div class="media-links no-overlay">
                                 <div class="links-wrap">
-                                    <a href="single-album.html" class="p-link"></a>
+                                    <a href="" class="p-link" @onclick="GoTo"></a>
                                 </div>
                                 <div class="bottom-links">
                                     <a href="https://play.google.com/store/music" target="blanck">
@@ -124,7 +124,7 @@
                             <img src="assets/img/01.jpg" alt="" width="100%">
                             <div class="media-links no-overlay">
                                 <div class="links-wrap">
-                                    <a href="single-album.html" class="p-link"></a>
+                                    <a href="single-album.html" class="p-link" @onclick="GoTo"></a>
                                 </div>
                                 <div class="bottom-links">
                                     <a href="https://play.google.com/store/music" target="blanck">
@@ -155,4 +155,8 @@
 
 @code {
 
+    void GoTo()
+    {
+        nav.NavigateTo("/");
+    }
 }
