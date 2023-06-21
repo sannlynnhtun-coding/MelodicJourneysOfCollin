@@ -6,7 +6,8 @@
     @* <div class="player player--active" style="@(_show ? "" : "display:none;")"> *@
     <div class="player player--active">
         <div class="player__cover">
-            <img src="@MusicInfo.Cover" alt="">
+            @* <img src="@MusicInfo.Cover" alt=""> *@
+            <img src="@MusicInfo.Cover" loading="lazy" alt="…" width="200" height="200">
         </div>
 
         <div class="player__content">
