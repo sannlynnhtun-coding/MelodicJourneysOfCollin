@@ -1,0 +1,94 @@
+﻿@page "/releases"
+@if (_musicInfoList is not null)
+{
+    <div class="row mt-5">
+        <Virtualize Context="musicInfoItem" ItemsProvider="GetLocalPlaylist" ItemSize="300">
+            <ItemContent>
+                <div class="col-md-6 col-sm-6">
+                    <div class="vertical-item slide-media text-center loop-color">
+                        <div class="item-media-wrap">
+                            <img src="assets/img/cd.png" alt="">
+                            <div class="item-media back-media">
+                                <img src="assets/img/cd.png" alt="" width="100%" height="90%">
+                            </div>
+                            <div class="item-media">
+                                <img src="@musicInfoItem.Cover" loading="lazy" alt="…" width="100%">
+                                <div class="media-links no-overlay">
+                                    <div class="links-wrap">
+                                        <a href="javascript:void(0);" class="p-link" @onclick="GoTo"></a>
+                                    </div>
+                                    <div class="bottom-links">
+                                        <a href="https://play.google.com/store/music" target="blank">
+                                            <img src="assets/img/google-play.png" alt="">
+                                        </a>
+                                        <a href="https://itunes.apple.com/us/genre/music" target="blank">
+                                            <img src="assets/img/app-store.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content topmargin_25 pb-4">
+                            <div class="star-rating">
+                                <span>
+                                    <strong class="rating">@musicInfoItem.Artists</strong>
+                                </span>
+                            </div>
+                            <h4 class="entry-title topmargin_5">
+                                <a href="javascript:void(0)">"@musicInfoItem.Name"</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                @{
+                    int index = Convert.ToInt32(_musicInfoListSlide1.Get(musicInfoItem)) - 1;
+                    var musicInfoItem2 = index + 1 > _musicInfoListSlide2.Count ? null : _musicInfoListSlide2[index];
+                    if (musicInfoItem2 is not null)
+                    {
+                        <div class="col-md-6 col-sm-6">
+                            <div class="vertical-item slide-media text-center loop-color">
+                                <div class="item-media-wrap">
+                                    <img src="assets/img/cd.png" alt="">
+                                    <div class="item-media back-media">
+                                        <img src="assets/img/cd.png" alt="" width="100%" height="90%">
+                                    </div>
+                                    <div class="item-media">
+                                        <img src="@musicInfoItem2.Cover" loading="lazy" alt="…" width="100%">
+                                        <div class="media-links no-overlay">
+                                            <div class="links-wrap">
+                                                <a href="javascript:void(0);" class="p-link" @onclick="GoTo"></a>
+                                            </div>
+                                            <div class="bottom-links">
+                                                <a href="https://play.google.com/store/music" target="blank">
+                                                    <img src="assets/img/google-play.png" alt="">
+                                                </a>
+                                                <a href="https://itunes.apple.com/us/genre/music" target="blank">
+                                                    <img src="assets/img/app-store.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-content topmargin_25 pb-4">
+                                    <div class="star-rating">
+                                        <span>
+                                            <strong class="rating">@musicInfoItem2.Artists</strong>
+                                        </span>
+                                    </div>
+                                    <h4 class="entry-title topmargin_5">
+                                        <a href="javascript:void(0)">"@musicInfoItem2.Name"</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </ItemContent>
+            <Placeholder>
+                <p>
+                    Loading&hellip;
+                </p>
+            </Placeholder>
+        </Virtualize>
+    </div>
+}
