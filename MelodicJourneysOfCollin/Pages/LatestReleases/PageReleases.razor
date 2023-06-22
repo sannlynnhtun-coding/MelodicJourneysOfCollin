@@ -2,7 +2,7 @@
 @if (_musicInfoList is not null)
 {
     <div class="row mt-5">
-        <Virtualize Context="musicInfoItem" ItemsProvider="GetLocalPlaylist" ItemSize="300">
+        <Virtualize Context="musicInfoItem" ItemsProvider="GetLocalPlaylist">
             <ItemContent>
                 <div class="col-md-6 col-sm-6">
                     <div class="vertical-item slide-media text-center loop-color">
