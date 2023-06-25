@@ -42,17 +42,17 @@ namespace MelodicJourneysOfCollin.Services
             return list;
         }
 
-        public static SoundCloudPaginationModel MusicPagination(int pageNo = 1 , int pageSize = 4)
+        public static MusicReleasePaginationModel releaseListPagination(int pageNo = 1 , int pageSize = 4)
         {
-            int count = SoundCloundPlaylist.Count;
+            int count = LocalPlaylist.Count;
             int totalPage = count / pageSize;
             if(count % totalPage == 0)
             {
                 totalPage++;
             }
-            var result = SoundCloundPlaylist.Skip((pageNo-1) * pageSize).Take(pageSize).ToList();
-            return new SoundCloudPaginationModel {
-                currentPage = pageNo,
+            var result = LocalPlaylist.Skip((pageNo-1) * pageSize).Take(pageSize).ToList();
+            return new MusicReleasePaginationModel {
+                musicList = result,
                // musicList = result,
                 totalPage = totalPage,
             };
