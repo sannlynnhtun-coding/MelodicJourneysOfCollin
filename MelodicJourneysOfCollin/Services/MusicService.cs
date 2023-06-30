@@ -37,7 +37,6 @@ namespace MelodicJourneysOfCollin.Services
         //                             .ToList();
         public static List<T> GetMusicPlayList<T>(string json)
         {
-            //var list = JsonConvert.DeserializeObject<List<T>>(json);
             var list = json.ToObject<List<T>>();
             return list;
         }
@@ -66,7 +65,7 @@ namespace MelodicJourneysOfCollin.Services
             ""Id"": ""1"",
             ""Name"": ""Collin - Day 4 [2023]"",
             ""Genre"": ""EDM"",
-""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
+            ""Link"": ""https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1493379526&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"",
             ""PlatformType"": ""0"",
             ""DownloadLinks"" : [
 		        {
