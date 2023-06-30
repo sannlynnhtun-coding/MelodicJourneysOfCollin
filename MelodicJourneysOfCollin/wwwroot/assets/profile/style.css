@@ -4,7 +4,6 @@
 }
 
 .card {
-  max-width: 340px;
   margin: auto;
   overflow-y: auto;
   position: relative;
@@ -157,10 +156,11 @@
 }
 
 .card-social {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
 }
 .card-social svg {
   fill: #a5b5ce;
