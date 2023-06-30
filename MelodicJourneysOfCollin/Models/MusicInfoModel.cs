@@ -1,4 +1,6 @@
-﻿namespace MelodicJourneysOfCollin.Models
+﻿using Newtonsoft.Json;
+
+namespace MelodicJourneysOfCollin.Models
 {
     public class MusicInfoModel
     {

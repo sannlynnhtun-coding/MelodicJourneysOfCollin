@@ -9,4 +9,11 @@
         MediaFire,
         Favorite
     }
+
+    public enum EnumPageType
+    {
+        Playlist,
+        Profile,
+        AboutUs
+    }
 }

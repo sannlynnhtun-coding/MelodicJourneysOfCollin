@@ -599,9 +599,9 @@ window.setPlayer = function () {
         autoplay: true
     });
 
-    if ($('#audio').length > 0) {
-        player.play();
-    }
+    // if ($('#audio').length > 0 && autoPlay) {
+    //     player.play();
+    // }
 
     var audio = $('#audio');
     player.on('play', event => {
