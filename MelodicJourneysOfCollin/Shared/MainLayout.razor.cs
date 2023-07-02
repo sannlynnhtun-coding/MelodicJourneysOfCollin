@@ -9,19 +9,38 @@ public partial class MainLayout
     private MusicInfoModel _musicInfo;
     private EnumPageType _pageType = EnumPageType.Playlist;
 
-    protected override void OnAfterRender(bool firstRender)
+    //protected override void OnAfterRender(bool firstRender)
+    //{
+    //    if (firstRender)
+    //    {
+    //        Play(new MusicInfoModel
+    //        {
+    //            Artists = "Collin",
+    //            Length = "00:36",
+    //            Link = "Collin - Turn Up The Bass.mp3",
+    //            Name = "Collin - Turn Up The Bass.mp3",
+    //            Cover = "https://source.boomplaymusic.com/group10/M00/06/26/5d2d7165319643fc880643ac42d33a73.jpg",
+    //        });
+    //    }
+    //}
+
+    protected override void OnInitialized()
     {
-        if (firstRender)
-        {
-            Play(new MusicInfoModel
-            {
-                Artists = "Collin",
-                Length = "00:36",
-                Link = "Collin - Turn Up The Bass.mp3",
-                Name = "Collin - Turn Up The Bass",
-                Cover = "https://source.boomplaymusic.com/group10/M00/06/26/5d2d7165319643fc880643ac42d33a73.jpg",
-            });
-        }
+        //Play(new MusicInfoModel
+        //{
+        //    Artists = "Collin",
+        //    Length = "00:36",
+        //    Link = "Collin - Turn Up The Bass.mp3",
+        //    Name = "Collin - Turn Up The Bass.mp3",
+        //    Cover = "https://source.boomplaymusic.com/group10/M00/06/26/5d2d7165319643fc880643ac42d33a73.jpg",
+        //});
+        _musicInfo = new MusicInfoModel {
+            Artists = "Collin",
+            Length = "00:36",
+            Link = "Collin - Turn Up The Bass.mp3",
+            Name = "Collin - Turn Up The Bass.mp3",
+            Cover = "https://source.boomplaymusic.com/group10/M00/06/26/5d2d7165319643fc880643ac42d33a73.jpg",
+        };
     }
 
     private void Play(MusicInfoModel musicInfo)

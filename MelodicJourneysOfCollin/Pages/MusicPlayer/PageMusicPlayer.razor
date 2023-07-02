@@ -15,7 +15,7 @@
                 <b class="player__title">@MusicInfo.Name</b> –
                 <span class="player__artist">@MusicInfo.Artists</span>
             </span>
-            <audio src="@MusicInfo.Link?.ToLocalLink()" id="audio" controls></audio>
+            <audio src="@MusicInfo.Link?.ToLocalLink()" id="audio" autoplay controls></audio>
         </div>
     </div>
 
@@ -31,6 +31,7 @@
 
     [Parameter]
     public MusicInfoModel? MusicInfo { get; set; }
+
 
     private bool _show = false;
     
